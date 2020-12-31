@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zsp.mapper.RaiderMapper">
+    <resultMap id="raider" type="com.zsp.bean.RaidersEntity">
+        <result column="raiders_id" property="raidersId"/>
+        <result column="raiders_img" property="raidersImg"/>
+        <result column="raiders_title" property="raidersTitle"/>
+        <result column="raiders_like" property="raidersLike"/>
+        <result column="raiders_message" property="raidersMessage"/>
+        <result column="raiders_look" property="raidersLook"/>
+        <result column="raiders_author" property="raidersAuthor"/>
+        <result column="raiders_authorImg" property="raidersAuthorImg"/>
+        <result column="raiders_time" property="raidersTime"/>
+        <result column="raiders_href" property="raidersHref"/>
+    </resultMap>
+    <select id="getRaiderList" resultMap="raider">
+        select *
+        from raiders
+    </select>
+</mapper>

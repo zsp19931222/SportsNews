@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zsp.mapper.SportsNewsMapper">
+    <select id="getCBANewsList" resultType="com.zsp.bean.SportNewsEntity">
+        select *
+        from cba order by id desc
+    </select>
+    <select id="getChinaSoccerNewsList" resultType="com.zsp.bean.SportNewsEntity">
+        select *
+        from china_soccer order by id desc
+    </select>
+    <select id="getLatestNewsList" resultType="com.zsp.bean.SportNewsEntity">
+        select *
+        from latest order by id desc
+    </select>
+    <select id="getNBANewsList" resultType="com.zsp.bean.SportNewsEntity">
+        select *
+        from nba order by id desc
+    </select>
+    <select id="getWorldSoccerNewsList" resultType="com.zsp.bean.SportNewsEntity">
+        select *
+        from world_soccer order by id desc
+    </select>
+    <select id="getOtherNewsList" resultType="com.zsp.bean.SportNewsEntity">
+        select *
+        from other order by id desc
+    </select>
+</mapper>
