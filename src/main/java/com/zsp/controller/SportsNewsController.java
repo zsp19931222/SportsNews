@@ -41,6 +41,9 @@ public class SportsNewsController {
             case 5:
                 resultBody = sportsNewsService.getLatestNewsList();
                 break;
+            case 6:
+                resultBody = sportsNewsService.getHuPuSoccerNewsList();
+                break;
             default:
                 return ResultBody.error("无该栏目");
         }

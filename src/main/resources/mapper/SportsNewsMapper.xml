@@ -27,4 +27,8 @@
         select *
         from other order by id desc
     </select>
+    <select id="getHuPuSoccerNewsList" resultType="com.zsp.bean.SportNewsEntity">
+        select *
+        from hupu_soccer order by id desc
+    </select>
 </mapper>

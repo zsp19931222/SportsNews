@@ -16,5 +16,6 @@ public interface ISportsNewsService {
     List<SportNewsEntity> getNBANewsList();
     List<SportNewsEntity> getWorldSoccerNewsList();
     List<SportNewsEntity> getOtherNewsList();
+    List<SportNewsEntity> getHuPuSoccerNewsList();
 
 }

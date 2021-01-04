@@ -47,4 +47,9 @@ public class SportsNewsService implements ISportsNewsService {
     public List<SportNewsEntity> getOtherNewsList() {
         return sportsNewsMapper.getOtherNewsList();
     }
+
+    @Override
+    public List<SportNewsEntity> getHuPuSoccerNewsList() {
+        return sportsNewsMapper.getHuPuSoccerNewsList();
+    }
 }

@@ -19,4 +19,5 @@ public interface SportsNewsMapper {
     List<SportNewsEntity> getNBANewsList();
     List<SportNewsEntity> getWorldSoccerNewsList();
     List<SportNewsEntity> getOtherNewsList();
+    List<SportNewsEntity> getHuPuSoccerNewsList();
 }
