@@ -1,6 +1,7 @@
 package com.zsp.service;
 
 import com.zsp.bean.SportNewsEntity;
+import com.zsp.bean.SportVideoEntity;
 
 import java.util.List;
 
@@ -11,11 +12,19 @@ import java.util.List;
  */
 public interface ISportsNewsService {
     List<SportNewsEntity> getCBANewsList();
+
     List<SportNewsEntity> getChinaSoccerNewsList();
+
     List<SportNewsEntity> getLatestNewsList();
+
     List<SportNewsEntity> getNBANewsList();
+
     List<SportNewsEntity> getWorldSoccerNewsList();
+
     List<SportNewsEntity> getOtherNewsList();
+
     List<SportNewsEntity> getHuPuSoccerNewsList();
+
+    List<SportVideoEntity> getVideoList();
 
 }

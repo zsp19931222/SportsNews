@@ -31,4 +31,8 @@
         select *
         from hupu_soccer order by id desc
     </select>
+    <select id="getVideoList" resultType="com.zsp.bean.SportVideoEntity">
+        select *
+        from video order by id desc
+    </select>
 </mapper>

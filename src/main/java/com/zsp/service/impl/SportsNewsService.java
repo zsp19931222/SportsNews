@@ -1,6 +1,7 @@
 package com.zsp.service.impl;
 
 import com.zsp.bean.SportNewsEntity;
+import com.zsp.bean.SportVideoEntity;
 import com.zsp.mapper.SportsNewsMapper;
 import com.zsp.service.ISportsNewsService;
 import org.springframework.stereotype.Service;
@@ -51,5 +52,10 @@ public class SportsNewsService implements ISportsNewsService {
     @Override
     public List<SportNewsEntity> getHuPuSoccerNewsList() {
         return sportsNewsMapper.getHuPuSoccerNewsList();
+    }
+
+    @Override
+    public List<SportVideoEntity> getVideoList() {
+        return sportsNewsMapper.getVideoList();
     }
 }

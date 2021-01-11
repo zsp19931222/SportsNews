@@ -1,6 +1,7 @@
 package com.zsp.mapper;
 
 import com.zsp.bean.SportNewsEntity;
+import com.zsp.bean.SportVideoEntity;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
@@ -20,4 +21,6 @@ public interface SportsNewsMapper {
     List<SportNewsEntity> getWorldSoccerNewsList();
     List<SportNewsEntity> getOtherNewsList();
     List<SportNewsEntity> getHuPuSoccerNewsList();
+    List<SportVideoEntity> getVideoList();
+
 }

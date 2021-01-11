@@ -49,4 +49,11 @@ public class SportsNewsController {
         }
         return ResultBody.success(resultBody);
     }
+
+    @GetMapping(value = "/getVideoList/{pageSize}/{pageNum}")
+    @ResponseBody
+    public ResultBody getVideoList(@PathVariable(value = "pageSize") int pageSize, @PathVariable(value = "pageNum") int pageNum) {
+        PageHelper.startPage(pageNum, pageSize);
+        return ResultBody.success(sportsNewsService.getVideoList());
+    }
 }
