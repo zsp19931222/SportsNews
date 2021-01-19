@@ -4,9 +4,16 @@ import com.github.tobato.fastdfs.FdfsClientConfig;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration;
+import org.springframework.boot.web.servlet.MultipartConfigFactory;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.EnableMBeanExport;
 import org.springframework.context.annotation.Import;
 import org.springframework.jmx.support.RegistrationPolicy;
+import org.springframework.util.unit.DataSize;
+
+import javax.servlet.MultipartConfigElement;
+
+import static org.springframework.util.unit.DataUnit.MEGABYTES;
 
 //解决jmx重复注册bean的问题
 @EnableMBeanExport(registration = RegistrationPolicy.IGNORE_EXISTING)
@@ -16,5 +23,15 @@ import org.springframework.jmx.support.RegistrationPolicy;
 public class SpringBootDemoApplication {
     public static void main(String[] args) {
         SpringApplication.run(SpringBootDemoApplication.class, args);
+    }
+
+    @Bean
+    public MultipartConfigElement multipartConfigElement() {
+        MultipartConfigFactory factory=new MultipartConfigFactory();
+        //文件单次上传最大限制
+        factory.setMaxFileSize(DataSize.of(50,MEGABYTES));
+        //文件总上传最大限制
+        factory.setMaxRequestSize(DataSize.of(100,MEGABYTES));
+        return factory.createMultipartConfig();
     }
 }
